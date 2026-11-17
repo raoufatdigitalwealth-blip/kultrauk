@@ -1,0 +1,3 @@
+(function(){var nav=document.getElementById('nav'),bg=document.getElementById('burger');if(!nav||!bg)return;nav.classList.add('solid');
+bg.addEventListener('click',function(){var o=nav.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Close menu':'Open menu');document.body.style.overflow=o?'hidden':''});
+[].forEach.call(document.querySelectorAll('#panel a'),function(a){a.addEventListener('click',function(){nav.classList.remove('open');document.body.style.overflow=''})})})();
